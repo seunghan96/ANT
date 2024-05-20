@@ -85,7 +85,7 @@ python bin/tstr_experiment.py -c configs/tstr/wiki2000_nips.yaml --ckpt saved_we
 
 <br>
 
-# Acknowledgement
+## Acknowledgement
 
 We appreciate the following github repositories for their valuable code base & datasets:
 
