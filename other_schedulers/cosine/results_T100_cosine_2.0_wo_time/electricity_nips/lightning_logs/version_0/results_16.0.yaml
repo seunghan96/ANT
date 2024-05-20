@@ -1,0 +1,48 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_electricity.yaml
+  context_length: 336
+  dataset: electricity_nips
+  device: cuda:3
+  diffusion_config: diffusion_small_config
+  eval_every: 100
+  freq: H
+  gradient_clip_val: 0.5
+  init_skip: false
+  is_train: 0
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 16
+  out_dir: ./results/
+  prediction_length: 24
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 16.0
+  schedule: cosine
+  seed: 1
+  setup: forecasting
+  tau: 2.0
+  test_miss: 0
+  test_scale: 16.0
+  time_embed: 0
+  timesteps: 100
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: true
+  use_validation_set: true
+metrics:
+- ND: 0.060193560116639865
+  NRMSE: 0.6382798738174452
+  mean_wQuantileLoss: 0.04849899496747667
+  missing_scenario: none
+  missing_values: 0
+version: 1

@@ -1,0 +1,25 @@
+backbone_parameters:
+  hidden_dim: 64
+  input_dim: 1
+  num_residual_blocks: 3
+  output_dim: 1
+  residual_block: s4
+  step_emb: 128
+beta_end: 0.1
+beta_start: 0.0001
+cardinalities: null
+context_length: 360
+device: cuda:2
+diffusion_scheduler: !!python/name:uncond_ts_diff.utils.linear_beta_schedule ''
+freq: B
+init_skip: true
+lr: 0.001
+normalization: mean
+num_feat_dynamic_real: 0
+num_feat_static_cat: 0
+num_feat_static_real: 0
+prediction_length: 30
+timesteps: 100
+use_features: false
+use_lags: true
+zero_enforce: true

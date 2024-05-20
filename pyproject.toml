@@ -1,0 +1,28 @@
+[project]
+name = "ANT"
+version = "0.1.0"
+description = "ANT: Adaptive Noise Scheduler for Time Series Diffusion Model"
+authors = []
+dependencies = [
+    "torch~=1.13.1",
+    "pytorch-lightning~=1.9.4",
+    "gluonts[mxnet,pro]~=0.12.3",
+    "matplotlib",
+    "seaborn",
+    "opt_einsum~=3.3.0",
+    "einops",
+    "black",
+    "tqdm",
+    "scipy",
+    "scikit-learn",
+    "numba",
+    "jupyter",
+    "rich",
+    "statsmodels",
+    "pykeops==2.1.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[tool.black]
+line-length = 79

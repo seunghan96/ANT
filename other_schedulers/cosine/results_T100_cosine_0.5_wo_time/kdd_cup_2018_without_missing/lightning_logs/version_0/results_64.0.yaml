@@ -1,0 +1,48 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_kdd_cup.yaml
+  context_length: 312
+  dataset: kdd_cup_2018_without_missing
+  device: cuda:3
+  diffusion_config: diffusion_small_config
+  eval_every: 1
+  freq: H
+  gradient_clip_val: 0.5
+  init_skip: true
+  is_train: 0
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 16
+  out_dir: ./results/
+  prediction_length: 48
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 64.0
+  schedule: cosine
+  seed: 1
+  setup: forecasting
+  tau: 0.5
+  test_miss: 0
+  test_scale: 64.0
+  time_embed: 0
+  timesteps: 100
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: true
+  use_validation_set: false
+metrics:
+- ND: 0.4701342482067318
+  NRMSE: 1.0601918728693507
+  mean_wQuantileLoss: 0.3682962440578181
+  missing_scenario: none
+  missing_values: 0
+version: 1

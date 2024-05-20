@@ -1,0 +1,19 @@
+context_length: 336
+dataset: solar_nips
+diffusion_config: diffusion_small_config
+init_skip: false
+prediction_length: 24
+scaling_type: mean
+use_features: false
+use_lags: true
+lr_scale: 
+  deepar: 1.0
+  transformer: 0.2
+epoch_alpha: 
+  deepar: 5
+  transformer: 5
+num_samples: 100000
+scaling_type:
+  linear: mean
+  deepar: mean
+  transformer: mean

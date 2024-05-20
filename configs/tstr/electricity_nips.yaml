@@ -1,0 +1,20 @@
+context_length: 336
+dataset: electricity_nips
+diffusion_config: diffusion_small_config
+init_skip: false
+prediction_length: 24
+scaling_type: mean
+use_features: false
+use_lags: true
+lr_scale: 
+  deepar: 2.0
+  transformer: 5.0
+epoch_alpha: 
+  deepar: 1
+  transformer: 3
+num_samples: 100000
+scaling_type:
+  linear: mean
+  deepar: min-max
+  transformer: min-max
+  

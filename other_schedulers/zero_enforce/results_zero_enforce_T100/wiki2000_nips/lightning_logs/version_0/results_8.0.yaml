@@ -1,0 +1,51 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_wiki.yaml
+  context_length: 360
+  dataset: wiki2000_nips
+  device: cuda:4
+  diffusion_config: diffusion_small_config
+  eval_every: 100
+  freq: 1D
+  gradient_clip_val: 0.5
+  init_skip: false
+  is_train: 0
+  long_term: 1
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 4
+  out_dir: ./results/
+  prediction_length: 30
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 8.0
+  schedule: linear
+  seed: 1
+  setup: forecasting
+  tau: 1
+  test_miss: 0
+  test_scale: 8.0
+  time_embed: 1
+  timesteps: 100
+  train_miss: 0
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: false
+  use_validation_set: true
+  zero_enforce: 1
+metrics:
+- ND: 0.25380614560845594
+  NRMSE: 2.065562432781801
+  mean_wQuantileLoss: 0.23989428968477325
+  missing_scenario: none
+  missing_values: 0
+version: 1

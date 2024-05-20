@@ -1,0 +1,19 @@
+context_length: 360
+dataset: wiki2000_nips
+diffusion_config: diffusion_small_config
+init_skip: false
+prediction_length: 30
+scaling_type: mean
+use_features: false
+use_lags: false
+lr_scale: 
+  deepar: 20.0
+  transformer: 5.0
+epoch_alpha: 
+  deepar: 4
+  transformer: 10
+num_samples: 20000
+scaling_type:
+  linear: mean
+  deepar: min-max
+  transformer: min-max

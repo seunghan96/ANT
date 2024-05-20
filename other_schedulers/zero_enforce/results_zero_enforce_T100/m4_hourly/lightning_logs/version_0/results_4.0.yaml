@@ -1,0 +1,52 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_m4.yaml
+  context_length: 312
+  dataset: m4_hourly
+  device: cuda:4
+  diffusion_config: diffusion_small_config
+  eval_every: 50
+  freq: H
+  gradient_clip_val: 0.5
+  init_skip: false
+  is_train: 0
+  long_term: 1
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 16
+  out_dir: ./results/
+  prediction_length: 48
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 4.0
+  schedule: linear
+  seed: 1
+  setup: forecasting
+  short_T: 1
+  tau: 1
+  test_miss: 0
+  test_scale: 4.0
+  time_embed: 1
+  timesteps: 100
+  train_miss: 0
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: false
+  use_validation_set: false
+  zero_enforce: 1
+metrics:
+- ND: 0.04756696993398469
+  NRMSE: 0.348348638165561
+  mean_wQuantileLoss: 0.04649774678231021
+  missing_scenario: none
+  missing_values: 0
+version: 1

@@ -1,0 +1,19 @@
+context_length: 312
+dataset: kdd_cup_2018_without_missing
+diffusion_config: diffusion_small_config
+init_skip: true
+prediction_length: 48
+scaling_type: mean
+use_features: false
+use_lags: true
+lr_scale: 
+  deepar: 20.0
+  transformer: 0.1
+epoch_alpha: 
+  deepar: 1
+  transformer: 3
+num_samples: 50000
+scaling_type:
+  linear: mean
+  deepar: mean
+  transformer: mean

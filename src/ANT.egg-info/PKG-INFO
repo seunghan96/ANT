@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ANT
+Version: 0.1.0
+Summary: ANT: Adaptive Noise Scheduler for Time Series Diffusion Model
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch~=1.13.1
+Requires-Dist: pytorch-lightning~=1.9.4
+Requires-Dist: gluonts[mxnet,pro]~=0.12.3
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: opt_einsum~=3.3.0
+Requires-Dist: einops
+Requires-Dist: black
+Requires-Dist: tqdm
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: numba
+Requires-Dist: jupyter
+Requires-Dist: rich
+Requires-Dist: statsmodels
+Requires-Dist: pykeops==2.1.1
+
+# ANT
+
+```
+conda create --name ANT --yes python=3.8 && conda activate ANT
+pip install --editable "."
+```

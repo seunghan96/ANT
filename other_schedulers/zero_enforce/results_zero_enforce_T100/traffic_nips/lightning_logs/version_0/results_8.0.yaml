@@ -1,0 +1,51 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_traffic.yaml
+  context_length: 336
+  dataset: traffic_nips
+  device: cuda:2
+  diffusion_config: diffusion_small_config
+  eval_every: 50
+  freq: H
+  gradient_clip_val: 0.5
+  init_skip: true
+  is_train: 0
+  long_term: 1
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 4
+  out_dir: ./results/
+  prediction_length: 24
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 8.0
+  schedule: linear
+  seed: 1
+  setup: forecasting
+  tau: 1
+  test_miss: 0
+  test_scale: 8.0
+  time_embed: 1
+  timesteps: 100
+  train_miss: 0
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: true
+  use_validation_set: true
+  zero_enforce: 1
+metrics:
+- ND: 0.13403544929128228
+  NRMSE: 0.41694039504945346
+  mean_wQuantileLoss: 0.12324139830216824
+  missing_scenario: none
+  missing_values: 0
+version: 1

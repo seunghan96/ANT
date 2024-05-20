@@ -1,0 +1,48 @@
+config:
+  batch_size: 64
+  beta_ratio: 1
+  config: configs/train_tsdiff/train_exchange.yaml
+  context_length: 360
+  dataset: exchange_rate_nips
+  device: cuda:7
+  diffusion_config: diffusion_small_config
+  eval_every: 50
+  freq: B
+  gradient_clip_val: 0.5
+  init_skip: true
+  is_train: 0
+  lr: 0.001
+  max_epochs: 1000
+  missing_data_configs:
+  - missing_scenario: none
+    missing_values: 0
+  model: unconditional
+  normalization: mean
+  num_batches_per_epoch: 128
+  num_samples: 16
+  out_dir: ./results/
+  prediction_length: 30
+  sampler: ddpm
+  sampler_params:
+    guidance: quantile
+    scale: 32.0
+  schedule: cosine
+  seed: 1
+  setup: forecasting
+  tau: 1.0
+  test_miss: 0
+  test_scale: 32.0
+  time_embed: 0
+  timesteps: 100
+  train_scale:
+  - '999'
+  use_features: false
+  use_lags: true
+  use_validation_set: true
+metrics:
+- ND: 0.013691232380330915
+  NRMSE: 0.01973281452683758
+  mean_wQuantileLoss: 0.010350222835427778
+  missing_scenario: none
+  missing_values: 0
+version: 1

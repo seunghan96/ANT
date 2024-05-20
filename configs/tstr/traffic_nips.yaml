@@ -1,0 +1,19 @@
+context_length: 336
+dataset: traffic_nips
+diffusion_config: diffusion_small_config
+init_skip: true
+prediction_length: 24
+scaling_type: mean
+use_features: false
+use_lags: true
+lr_scale: 
+  deepar: 0.01
+  transformer: 10.0
+epoch_alpha: 
+  deepar: 5
+  transformer: 3
+num_samples: 50000
+scaling_type:
+  linear: mean
+  deepar: mean
+  transformer: mean
