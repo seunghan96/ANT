@@ -2,7 +2,7 @@
 
 <br>
 
-## Installation
+# Installation
 
 Create a conda environment
 
@@ -11,6 +11,12 @@ conda create --name ANT --yes python=3.8 && conda activate ANT
 
 pip install --editable "."
 ```
+
+<br>
+
+# Calculation of ANT score
+
+Refer to `ANT_score.ipynb`
 
 <br>
 
@@ -77,6 +83,7 @@ Load pretrained weights trained from **3-1) TS Forecasting**
 python bin/tstr_experiment.py -c configs/tstr/wiki2000_nips.yaml --ckpt saved_weights/results_T75_cosine_2.0_w_DE/wiki2000_nips/lightning_logs/version_0/local_best_checkpoint_4.0.ckpt --schedule cosine --timesteps 75 --tau 2.0 --time_embed 1
 ```
 
+<br>
 
 # Acknowledgement
 
