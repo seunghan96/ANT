@@ -2,7 +2,7 @@
 
 <br>
 
-# Installation
+## 1. Installation
 
 Create a conda environment
 
@@ -14,13 +14,13 @@ pip install --editable "."
 
 <br>
 
-# Calculation of ANT score
+## 2. Calculation of ANT score
 
 Refer to `ANT_score.ipynb`
 
 <br>
 
-# Three Downstream Tasks
+## 3. Three Downstream Tasks
 
 Example)
 
@@ -29,7 +29,7 @@ Example)
 
 <br>
 
-## 1) TS Forecasting
+### 1) TS Forecasting
 
 **a) Standard horizon ($H$)**
 
@@ -65,7 +65,7 @@ python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --sch
 
 <br>
 
-## 3-2) TS Refinement
+### 3-2) TS Refinement
 
 Load pretrained weights trained from **3-1) TS Forecasting**
 
@@ -75,7 +75,7 @@ python bin/refinement_experiment.py -c configs/refinement/wiki2000_nips-linear.y
 
 <br>
 
-## 3-3) TS Generation
+### 3-3) TS Generation
 
 Load pretrained weights trained from **3-1) TS Forecasting**
 
