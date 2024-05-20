@@ -24,8 +24,8 @@ Refer to `ANT_score.ipynb`
 
 Example)
 
-- Dataset: `Wikipedia`
-- Scheduler: `Cos(T=75, tau=2.0)`
+- Dataset: `M4`
+- Scheduler: `Cos(T=100, tau=1.0)`
 
 <br>
 
@@ -36,7 +36,7 @@ Example)
 - Train
 
 ```sh
-python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --schedule cosine --tau 2.0 --timesteps 75 --time_embed 1 --is_train 1 --train_scale 4.0,8.0,16.0,32.0
+python bin/train_model.py -c configs/train_tsdiff/train_m4_hourly.yaml --schedule cosine --tau 1.0 --timesteps 100 --time_embed 1 --is_train 1 --train_scale 1
 ```
 
 <br>
@@ -44,7 +44,7 @@ python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --sch
 - Test
 
 ```sh
-python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --schedule cosine --tau 2.0 --timesteps 75 --time_embed 1 --is_train 0 --test_scale 8.0 --train_scale 999
+python bin/train_model.py -c configs/train_tsdiff/train_m4_hourly.yaml --schedule cosine --tau 1.0 --timesteps 100 --time_embed 1 --is_train 0 --test_scale 16.0 --train_scale 1
 ```
 
 <br>
@@ -54,13 +54,13 @@ python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --sch
 - Train ( where $\alpha=2$)
 
 ```sh
-python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --schedule cosine --tau 2.0 --timesteps 75 --pred_alpha 2.0 --time_embed 1 --is_train 1 --train_scale 4.0,8.0,16.0,32.0
+python bin/train_model.py -c configs/train_tsdiff/train_m4_hourly.yaml --schedule cosine --tau 1.0 --timesteps 100 --pred_alpha 2.0 --time_embed 1 --is_train 1 --train_scale 1
 ```
 
 - Test
 
 ```sh
-python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --schedule cosine --tau 2.0 --timesteps 75 --pred_alpha 2.0 --time_embed 1 --is_train 0 --test_scale 16.0 --train_scale 999
+python bin/train_model.py -c configs/train_tsdiff/train_m4_hourly.yaml --schedule cosine --tau 1.0 --timesteps 100 --pred_alpha 2.0 --time_embed 1 --is_train 0 --test_scale 32.0 --train_scale 1
 ```
 
 <br>
@@ -70,7 +70,7 @@ python bin/train_model.py -c configs/train_tsdiff/train_wiki2000_nips.yaml --sch
 Load pretrained weights trained from **3-1) TS Forecasting**
 
 ```sh
-python bin/refinement_experiment.py -c configs/refinement/wiki2000_nips-linear.yaml --timesteps 75 --schedule cosine --tau 2.0 --time_embed 1 --ckpt saved_weights/results_T75_cosine_2.0_w_DE/wiki2000_nips/lightning_logs/version_0/checkpoints/last.ckpt
+python bin/refinement_experiment.py -c configs/refinement/m4_hourly-linear.yaml --timesteps 100 --schedule cosine --tau 1.0 --time_embed 1 --ckpt saved_weights/results_T100_cosine_1.0_w_DE/m4_hourly/lightning_logs/version_0/checkpoints/last.ckpt
 ```
 
 <br>
@@ -80,7 +80,7 @@ python bin/refinement_experiment.py -c configs/refinement/wiki2000_nips-linear.y
 Load pretrained weights trained from **3-1) TS Forecasting**
 
 ```sh
-python bin/tstr_experiment.py -c configs/tstr/wiki2000_nips.yaml --ckpt saved_weights/results_T75_cosine_2.0_w_DE/wiki2000_nips/lightning_logs/version_0/local_best_checkpoint_4.0.ckpt --schedule cosine --timesteps 75 --tau 2.0 --time_embed 1
+python bin/tstr_experiment.py -c configs/tstr/m4_hourly.yaml --ckpt saved_weights/results_T50_linear_0.0_wo_DE/m4_hourly/lightning_logs/version_0/checkpoints/last.ckpt --schedule cosine --timesteps 100 --tau 1.0 --time_embed 1
 ```
 
 <br>
