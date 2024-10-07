@@ -1,0 +1,19 @@
+context_length: 312
+dataset: m4_hourly
+diffusion_config: diffusion_small_config
+init_skip: false
+prediction_length: 48
+scaling_type: mean
+use_features: false
+use_lags: false
+lr_scale: 
+  deepar: 20.0
+  transformer: 0.05
+epoch_alpha: 
+  deepar: 1
+  transformer: 1
+num_samples: 10000
+scaling_type:
+  linear: mean
+  deepar: mean
+  transformer: min-max

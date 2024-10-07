@@ -1,0 +1,20 @@
+context_length: 360
+dataset: exchange_rate_nips
+diffusion_config: diffusion_small_config
+init_skip: true
+prediction_length: 30
+scaling_type: mean
+use_features: false
+use_lags: true
+lr_scale: 
+  deepar: 10.0
+  transformer: 2.0
+epoch_alpha: 
+  deepar: 1
+  transformer: 1
+num_samples: 10000
+scaling_type:
+  linear: mean
+  deepar: min-max
+  transformer: min-max
+  
