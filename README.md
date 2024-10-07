@@ -1,6 +1,6 @@
 # ANT: Adaptive Noise Schedule for Time Series Diffusion Models
 
-### Seunghan Lee, Taeyoung Park, Kibok Lee
+### Seunghan Lee, Kibok Lee, Taeyoung Park
 
 <br>
 
