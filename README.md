@@ -1,4 +1,15 @@
-# ANT: Adaptive Noise Scheduler for Time Series Diffusion Model
+# ANT: Adaptive Noise Schedule for Time Series Diffusion Models
+
+### Seunghan Lee, Taeyoung Park, Kibok Lee
+
+<br>
+
+This repository contains the official implementation for the paper [ANT: Adaptive Noise Schedule for Time Series Diffusion Models]([https://arxiv.org/abs/xxxxx](https://arxiv.org/abs/xxx)) 
+
+This work is accepted in 
+- [NeurIPS 2024](https://arxiv.org/abs/xxx).
+
+<br>
 
 <br>
 
