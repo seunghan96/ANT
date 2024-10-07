@@ -9,7 +9,10 @@ This repository contains the official implementation for the paper [ANT: Adaptiv
 This work is accepted in 
 - [NeurIPS 2024](https://arxiv.org/abs/xxx).
 
-<br>
+<p align="center">
+<img src="./figures/ANT.png"  alt="" align=center />
+</p>
+
 
 <br>
 
