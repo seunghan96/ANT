@@ -5,6 +5,7 @@
 (*: Co-corresponding Authors)
 <br>
 <br>
+
 This repository contains the official implementation for the paper [ANT: Adaptive Noise Schedule for Time Series Diffusion Models]([https://arxiv.org/abs/xxxxx](https://arxiv.org/abs/xxx)) 
 
 This work is accepted in 
