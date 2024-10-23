@@ -6,10 +6,11 @@
 <br>
 <br>
 
-This repository contains the official implementation for the paper [ANT: Adaptive Noise Schedule for Time Series Diffusion Models]([https://arxiv.org/abs/xxxxx](https://arxiv.org/abs/xxx)) 
+This repository contains the official implementation for the paper [ANT: Adaptive Noise Schedule for Time Series Diffusion Models](https://openreview.net/forum?id=pAsQSWlDUf)
 
-This work is accepted in 
-- [NeurIPS 2024](https://arxiv.org/abs/xxx).
+This work is accepted in **NeurIPS 2024**
+
+
 
 <p align="center">
 <img src="./figures/ANT.png"  alt="" align=center />
